@@ -1,0 +1,11 @@
+
+
+Name: John Doe
+Address: 123 fake st
+Phone: 9511234567
+Flower: Pansy
+Amount: 2
+Color: Yellow
+Flower: Jasmine
+Amount: 3
+Color: White

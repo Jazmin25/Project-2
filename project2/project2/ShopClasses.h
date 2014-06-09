@@ -36,28 +36,51 @@ public:
 	string getFrom() const;
 	string getAdd() const;
 	string getMess() const;
-
+	
     
   };
 
-class SP : public Order
+class Package : public Order
 {
 private:
-	string phone;
-	int ribColor;
-	int ballColor;
-public://NOTE MUST DO VIRTUAL FUNCTION & TEMPLETE EMAIL FOR ANYTHING ELSE BUILD ON WEDDING AND MAYBE ADD FUNERAL
+	string phone, color1, color2;
+	string flower, filler;
+	int totalOrder;	
+	string ribColor;
+public:
+
+	void setFill(string);
+	void setFlower(string);
 	void setPhone(string);
-	void setRCol(int);
-	void setBColor(int);
+	void setRCol(string);
+	void setTotal(int );
+	void setPCol(string);
+	void setSCol(string);
+	string getPCol() const;
+	string getSCol() const;
 	string getPhone() const;
-	int getRCol() const;
-	int getBCol() const;
+	string getFill() const;
+	string getFlower() const;
+	string getRCol() const;
+	int getTotal() const;
+	
 };
 
+class MailingList
+{
+private:
+	string email;
+	string name;
+public:
+	MailingList();
+	MailingList(string, string);
+	void setEmail(string);
+	void setName(string);
+	string getEmail() const;
+	string getName() const;
 
 
-
+};
 
 
 #endif	/* STRUCT_H */

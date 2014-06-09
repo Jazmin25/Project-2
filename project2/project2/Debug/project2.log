@@ -1,171 +1,27 @@
-﻿Build started 6/2/2014 12:03:11 PM.
-     1>Project "c:\Users\Jazmin\documents\visual studio 2010\Projects\project2\project2\project2.vcxproj" on node 2 (build target(s)).
-     1>PrepareForBuild:
-         Creating directory "c:\users\jazmin\documents\visual studio 2010\Projects\project2\Debug\".
-       InitializeBuildStatus:
+﻿Build started 6/8/2014 5:59:56 PM.
+     1>Project "C:\Users\Jazmin\Documents\Visual Studio 2010\Projects\project2\project2\project2.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
          Creating "Debug\project2.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp ShopClasses.cpp
-         ShopClasses.cpp
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(6): error C2600: 'DataB::DataB' : cannot define a compiler-generated special member function (must be declared in the class first)
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(8): error C2511: 'DataB::DataB(std::string,float)' : overloaded member function not found in 'DataB'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(8) : see declaration of 'DataB'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(9): error C2039: 'setName' : is not a member of 'DataB'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(8) : see declaration of 'DataB'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(10): error C2065: 'Name' : undeclared identifier
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(11): error C2039: 'setPrice' : is not a member of 'DataB'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(8) : see declaration of 'DataB'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(12): error C2065: 'price' : undeclared identifier
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(13): error C2039: 'getName' : is not a member of 'DataB'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(8) : see declaration of 'DataB'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(14): error C2270: 'getName' : modifiers not allowed on nonmember functions
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(14): error C2065: 'Name' : undeclared identifier
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(15): error C2039: 'getPrice' : is not a member of 'DataB'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(8) : see declaration of 'DataB'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(16): error C2270: 'getPrice' : modifiers not allowed on nonmember functions
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.cpp(16): error C2065: 'price' : undeclared identifier
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(82): error C2039: 'FName' : is not a member of 'DataB'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(8) : see declaration of 'DataB'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(83): error C2039: 'FName' : is not a member of 'DataB'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(8) : see declaration of 'DataB'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(133): error C2248: 'Order::to' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(17) : see declaration of 'Order::to'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(133): error C2664: 'std::basic_istream<_Elem,_Traits> &std::basic_istream<_Elem,_Traits>::getline(_Elem *,std::streamsize)' : cannot convert parameter 1 from 'std::string' to 'char *'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>
-                 ]
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(135): error C2248: 'Order::from' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(18) : see declaration of 'Order::from'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(135): error C2664: 'std::basic_istream<_Elem,_Traits> &std::basic_istream<_Elem,_Traits>::getline(_Elem *,std::streamsize)' : cannot convert parameter 1 from 'std::string' to 'char *'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>
-                 ]
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(137): error C2248: 'Order::Msg' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(19) : see declaration of 'Order::Msg'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(138): error C2248: 'Order::Msg' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(19) : see declaration of 'Order::Msg'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(138): error C2248: 'Order::Msg' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(19) : see declaration of 'Order::Msg'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(142): error C2248: 'Order::msg' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(21) : see declaration of 'Order::msg'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(142): error C2664: 'std::basic_istream<_Elem,_Traits> &std::basic_istream<_Elem,_Traits>::getline(_Elem *,std::streamsize)' : cannot convert parameter 1 from 'std::string' to 'char *'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>
-                 ]
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(145): error C2248: 'Order::Msg' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(19) : see declaration of 'Order::Msg'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(148): error C2248: 'Order::msg' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(21) : see declaration of 'Order::msg'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(148): error C2664: 'strncpy' : cannot convert parameter 1 from 'std::string' to 'char *'
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(155): error C2248: 'Order::delivery' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(19) : see declaration of 'Order::delivery'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(156): error C2248: 'Order::delivery' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(19) : see declaration of 'Order::delivery'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(160): error C2248: 'Order::address' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(20) : see declaration of 'Order::address'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(160): error C2664: 'std::basic_istream<_Elem,_Traits> &std::basic_istream<_Elem,_Traits>::getline(_Elem *,std::streamsize)' : cannot convert parameter 1 from 'std::string' to 'char *'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>
-                 ]
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(164): error C2248: 'Order::delivery' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(19) : see declaration of 'Order::delivery'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(167): error C2248: 'Order::address' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(20) : see declaration of 'Order::address'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(167): error C2664: 'strncpy' : cannot convert parameter 1 from 'std::string' to 'char *'
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(172): error C2248: 'Order::save' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(16) : see declaration of 'Order::save'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(173): error C2248: 'Order::save' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(16) : see declaration of 'Order::save'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(182): error C2248: 'Order::to' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(17) : see declaration of 'Order::to'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(182): error C2248: 'Order::from' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(18) : see declaration of 'Order::from'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(183): error C2248: 'Order::address' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(20) : see declaration of 'Order::address'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(184): error C2248: 'Order::msg' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(21) : see declaration of 'Order::msg'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(196): error C2248: 'Order::save' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(16) : see declaration of 'Order::save'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(249): error C2248: 'SP::recipient' : cannot access private member declared in class 'SP'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(46) : see declaration of 'SP::recipient'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(43) : see declaration of 'SP'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(249): error C2664: 'std::basic_istream<_Elem,_Traits> &std::basic_istream<_Elem,_Traits>::getline(_Elem *,std::streamsize)' : cannot convert parameter 1 from 'std::string' to 'char *'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>
-                 ]
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(252): error C2248: 'Order::address' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(20) : see declaration of 'Order::address'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(252): error C2664: 'std::basic_istream<_Elem,_Traits> &std::basic_istream<_Elem,_Traits>::getline(_Elem *,std::streamsize)' : cannot convert parameter 1 from 'std::string' to 'char *'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>
-                 ]
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(257): error C2248: 'SP::recipient' : cannot access private member declared in class 'SP'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(46) : see declaration of 'SP::recipient'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(43) : see declaration of 'SP'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(257): error C2248: 'Order::address' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(20) : see declaration of 'Order::address'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(280): error C2039: 'answer' : is not a member of 'SP'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(43) : see declaration of 'SP'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(282): error C2039: 'answer' : is not a member of 'SP'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(43) : see declaration of 'SP'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(282): error C2039: 'answer' : is not a member of 'SP'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(43) : see declaration of 'SP'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(291): error C2248: 'SP::recipient' : cannot access private member declared in class 'SP'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(46) : see declaration of 'SP::recipient'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(43) : see declaration of 'SP'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(292): error C2248: 'Order::address' : cannot access private member declared in class 'Order'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(20) : see declaration of 'Order::address'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(14) : see declaration of 'Order'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(304): error C2039: 'answer' : is not a member of 'SP'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(43) : see declaration of 'SP'
-     1>c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\main.cpp(304): error C2039: 'answer' : is not a member of 'SP'
-                 c:\users\jazmin\documents\visual studio 2010\projects\project2\project2\shopclasses.h(43) : see declaration of 'SP'
-         Generating Code...
-     1>Done Building Project "c:\Users\Jazmin\documents\visual studio 2010\Projects\project2\project2\project2.vcxproj" (build target(s)) -- FAILED.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jazmin\Documents\Visual Studio 2010\Projects\project2\Debug\project2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\project2.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Jazmin\Documents\Visual Studio 2010\Projects\project2\Debug\project2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jazmin\Documents\Visual Studio 2010\Projects\project2\Debug\project2.lib" /MACHINE:X86 Debug\project2.exe.embed.manifest.res
+         Debug\main.obj
+         Debug\ShopClasses.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\project2.exe.embed.manifest" /manifest Debug\project2.exe.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         project2.vcxproj -> C:\Users\Jazmin\Documents\Visual Studio 2010\Projects\project2\Debug\project2.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\project2.unsuccessfulbuild".
+         Touching "Debug\project2.lastbuildstate".
+     1>Done Building Project "C:\Users\Jazmin\Documents\Visual Studio 2010\Projects\project2\project2\project2.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:03.46
+Time Elapsed 00:00:01.08

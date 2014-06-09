@@ -1,16 +1,29 @@
+// SHOPCLASSES SPECIFICATION FILE
 #include <string>
 
 #ifndef ShopClasses_H
 #define	ShopClasses_H
 using namespace std;
 
+
+//VIRTUAL FUNCTION
+class Total
+{
+protected: 
+	float total;
+public:
+	void setTotal(float);
+	virtual float getTotal() const;
+};
+// STUCT DATAB DISPLAYS THE ARRAY OR FLOWERS
 struct DataB
 {
     string Name;
     float price;
 };
 
-class Order
+//CLASS ORDER USED TO PLACE ORDERS FOR BOUQUETS
+class Order : public Total
 {
 private:
 	char save;
@@ -40,12 +53,12 @@ public:
     
   };
 
+//CLASS PACKAGE USED TO PURCHASE WEDDING FLOWERS
 class Package : public Order
 {
 private:
 	string phone, color1, color2;
-	string flower, filler;
-	int totalOrder;	
+	string flower, filler;	
 	string ribColor;
 public:
 
@@ -53,7 +66,6 @@ public:
 	void setFlower(string);
 	void setPhone(string);
 	void setRCol(string);
-	void setTotal(int );
 	void setPCol(string);
 	void setSCol(string);
 	string getPCol() const;
@@ -62,25 +74,49 @@ public:
 	string getFill() const;
 	string getFlower() const;
 	string getRCol() const;
-	int getTotal() const;
-	
+
 };
 
+//TEMPLATE USED FOR RECIEVING NEWLETTER INFO
+template<class T>
 class MailingList
 {
 private:
-	string email;
-	string name;
+	T email;
+	T name;
 public:
 	MailingList();
-	MailingList(string, string);
-	void setEmail(string);
-	void setName(string);
-	string getEmail() const;
-	string getName() const;
-
-
+	MailingList(T, T);
+	void setEmail(T);
+	void setName(T);
+	T getEmail() const;
+	T getName() const;
 };
+
+template<class T>
+MailingList<T>::MailingList()
+{email = ""; name="";		}
+
+template<class T>
+MailingList<T>::MailingList(T a, T b)
+{email = a; name = b;}
+
+template<class T>
+void MailingList<T>::setEmail(T a)
+{email =a;}
+
+template<class T>
+void MailingList<T>::setName(T n)
+{name = n;}
+
+template<class T>
+T MailingList<T>::getEmail() const
+{return email;	}
+
+template<class T>
+T MailingList<T>::getName() const
+{return name;}
+
 
 
 #endif	/* STRUCT_H */

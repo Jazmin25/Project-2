@@ -11,15 +11,17 @@
 #include "ShopClasses.h"
 using namespace std;
 
+
 //Golbal Variables
 
 //Function Prototypes
-void Menu();
+
 void ordering();
 void SpOrder();
 void WPack();
 void Mailing();
-void displayTotal(const Order &);
+//FOR THE DO WHILE LOOP
+void Menu();
 void def(int);
 int getN();
 
@@ -42,15 +44,19 @@ int main(int argc, char** argv)
 	switch(inN)
 	{
 	case 1:
+		//DISPLAYS THE ORDER FUNCTION
 		ordering();
 		break;
 	case 2:
+		//DISPLAYS THE SPECIAL ORDER FUNCTION
 		SpOrder();
 		break;
 	case 3:
+		//DISPLAYS THE WEDDING PACKAGE FUNTION
 		WPack();
 		break;
 	case 4 :
+		//DISPLAYS THE FUNCTION TO BECOME A MEMBER OF THE SHOPS NEWSLETTER
 		Mailing();
 		break;
 	 default:   def(inN);
@@ -73,7 +79,10 @@ void ordering( )
     {"8. Chrysanthemum",  30.00},{"9. Daffodil", 20.00},{"10. Daisy",  20.00},{"11. Delphinium",  50.00},
     {"12. Ginger ",  80.00},{"13. Gardenia",  180.00},{"14. Gladiolus",  70.00},{"15. Iris",  40.00},
     {"16. Lily",  80.00},{"17. Orchid", 430.00}, {"18. Rose",  40.00},{"19. Sunflower", 75.00},{"20. Tulip",  50.00}};
+	//CLASS OBJECT
 	Order order;
+	
+	//VARIABLES
 	int NSize;
 	int choice, num, total =0;
 	string noMsg = "No message";
@@ -81,6 +90,7 @@ void ordering( )
 	string message, to, from, address;
 	char delivery, msg, save;
 	
+	//SHOP ITEMS AND PRICES
 	cout << "_______________________________________________" << endl;
     cout << "Name\t\tAmount in Stock\t Price per Stem\n\n";
 	cout << "_______________________________________________\n\n";
@@ -103,7 +113,7 @@ void ordering( )
 	string *N = new string[num];
 	int *T = new int[num];
 	
-
+	//USER INPUT FOR ORDER
 	cout << "\nFrom the list above enter the number of the boquet you wish to buy. ";
 	for (int i =0;i < num; i++)
 	{
@@ -136,6 +146,7 @@ void ordering( )
 	for ( int i =0;i < num; i++)
 		total+= *(T+i);
 	cin.ignore();
+
 	cout <<"Please enter the name for who the flowers are for. ";
 	getline(cin, to);
 	cout << "Please enter the name of the sender. ";
@@ -143,6 +154,7 @@ void ordering( )
 	cout << "Would you like to send a message with the flowers? (Y/N) ";
 	cin >> msg;
 	order.setMsg(msg);
+
 	if(order.getMsg() == 'Y' )
 	{
 		cin.ignore();
@@ -162,6 +174,7 @@ void ordering( )
 	cout << "\nThe fee will be $ 3.00 \n";
 	cin >> delivery;
 	order.setDel(delivery);
+
 	if(order.getDel() == 'Y')
 	{
 		cin.ignore();
@@ -181,7 +194,10 @@ void ordering( )
 	cout << "\nWould you like to place this order? (Y/N)";
 	cin >> save;
 	order.setSave(save);
+	
+	//USING CONSTRUCTOR TO INPUT MOST INFO
 	Order ORDER(save, delivery, msg, to, from, address, message);
+
 	if(order.getSave() == 'Y')
 	{
 		file.open("Order.txt", ios::out | ios::app);
@@ -257,7 +273,7 @@ void SpOrder()
 		total += *(SPtr+i);
 	cin.ignore();
 	
-
+	//USER INPUT FOR NAME, LOCATION ETC
 	cout << "Please enter the name of the recipient. ";
 	getline (cin, to);
 
@@ -280,6 +296,7 @@ void SpOrder()
 			cout << *(F+i) << "  ";
 			cout << *(SPtr+i) << endl;
 		}
+	//A MESSAGE TO THE BUYER TO WAIT FOR STORE CALL
 	cout <<"Price of Flowers: Varies\n";
 	cout << "A representative will call you within the day to give you the quote.\n";
 	cout << "Shipping will take between 4-6 days ( in state shipping only)\n";
@@ -299,6 +316,7 @@ void SpOrder()
 	cin >> ans1;
 	sp.setSave(ans1);
 	
+	//SAVING THE FILE
 	if(sp.getSave() =='Y')
 	{
 		file.open("SpecialOrder.txt", ios::out | ios::app);
@@ -349,18 +367,21 @@ void WPack()
 	string color1, color2, color3, name, phone, addr;
 	string noDel = "Pickup";
 	//wedding packages
+	//BRONZE PACKAGE
 	cout << "\t\tWedding Packages:\n____________________________________________\n";
 	cout << "1. Bronze Package \nIncludes: Brides Bouquet and Grooms Boutonniere\n";
 	cout << "Flower Choices:\t 1) Alstroemeria   2) Agapanthus  3) Aster  4) Chrysanthemum";
 	cout << "\n5) Delphinium  6) Iris  7) Rose  8)Tulip";
 	cout << "\nCost: $125.00 ";
 
+	//SILVER PACKAGE
 	cout <<"\n\n2. Silver Package \nIncludes: Brides Bouquet and Grooms Boutonniere\n";
 	cout << "Maid of Honor Bouquet and Best Man Boutonniere\n";
 	cout << "Flower Choices:\t 9) Calla Lily  10) Ginger  \n11) Gladiolus  12) Lily  13) Sunflowers";
 	cout << "\nOr any of the flowers in the Bronze package + 20 extra flowers";
 	cout << "\nCost: $250.00";
 
+	//GOLD PACKAGE
 	cout << "\n\n3. Gold Package \nIncludes Brides Bouquet and Grooms Boutonniere\n";
 	cout << "Maid of Honor Bouquet and Best Man Boutonniere\n";
 	cout << "5 Bridesmaids and Groomsmen Bouquets and Boutonnieres\n";
@@ -370,6 +391,7 @@ void WPack()
 	cout << "\nOr any of the flowers from the Gold package + 15 extra flowers.";
 	cout << "\nCost: $300.00";
 
+	//PLAT PACKAGE
 	cout <<"\n\n4. Platinum Package \nIncludesBrides Bouquet and Grooms Boutonniere\n";
 	cout << "Maid of Honor Bouquet and Best Man Boutonniere\n";
 	cout << "5 Bridesmaids and Groomsmen Bouquets and Boutonnieres\n";
@@ -382,7 +404,8 @@ void WPack()
 	cout << "\n\nFiller Choices:\t 19) Baby's Breath  20) Carnation  21) Daisy  22) Daffodils  23)None";
 	cout << "\nWhat package would you ike to order? ";
 	cin >> num;
-	//switch case for input
+
+	//switch case for input ON FLOSWER, FILLLER, COLORS AND RIBBON
 	switch(num)
 	{
 	case 1:
@@ -645,6 +668,7 @@ void WPack()
 		case 4: color3 = "Red"; p.setRCol(color3); break;
 		case 5: color3 = "Blue"; p.setRCol(color3); break;
 	}
+	//MORE USER INFO INPUT
 	cout << "Please leave your name and phone number for us to call you back.";
 	cin.ignore();
 	cout << "\nName: ";
@@ -683,13 +707,11 @@ void WPack()
 		cout << "Your order was cancelled.\n";
 	else
 		cout <<"That was not recognized";	
+	
+	
 }
 
-//void displayTotal(const Order &total)
-//{
-//	cout << "The total is " << total.getTotal();
-//
-//}
+//FUNCTION FO NEWSLETTER
 
 void Mailing()
 {
@@ -697,15 +719,37 @@ void Mailing()
 	fstream file;
 	cin.ignore();
 	cout << "\nThank you for signing up for our Newsletter. ";
-	cout << "\nPlease enter your name. ";
-	getline(cin,N);
+	bool check;
+	// CHECKING FOR GIBBERISH IN THE NAME
+	do {
+		cout << "\nPlease enter your name. ";
+		getline(cin,N);
+		check = true;
+		for(int i = 0; (i < N.length()) && (check == true); i++)
+		{
+			if(isdigit(N[i]))
+			{
+				check = false;
+			}
+			else
+			{
+				check = true; 
+			}
+	
+		}
+	
+	}while(check == false);
+
 	cout <<"\nPlease enter your email. ";
 	getline(cin, E);
-	MailingList mail(E,N);
+
+	MailingList<string> mail(E,N);
+	
+	//DISPLAYING INPUT
 	cout << "\nName: " << mail.getName() << "\nEmail: " << mail.getEmail();
 	cout <<"\nYou will now be added to our mailing list for our monthly newsletter.\n";
 
-	
+	//AUTOMATICALLY SAVING INPUT
 		file.open("Newsletter.txt", ios::out | ios::app);
 			if (file.fail())
 		{
@@ -716,7 +760,6 @@ void Mailing()
 			file << "\nName: " << mail.getName() << "\nEmail: " << mail.getEmail() <<endl;
 			file.close();
 		}
-
 }
 
 void def(int inN)
@@ -733,6 +776,7 @@ int getN()
 
 void Menu()
 {
+	//MENU OPTIONS
     cout << "______________________________________________";
 		cout << "\n\n\t\t    Menu: \n______________________________________________";
 		cout << "\n\n\t 1: Order a Bouquet \n\t 2: Special Order\n";
